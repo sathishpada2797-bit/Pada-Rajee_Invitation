@@ -1664,12 +1664,20 @@ animation:fadeUp 1s 3.2s ease forwards;
 }
 
 .hero-title {
-  font-size: 34px;
+  font-size: clamp(26px, 8vw, 32px);
+  line-height: 1.15;
+  letter-spacing: 0.2px;
+  overflow-wrap: anywhere;
 }
 
 .hero-title span {
-  font-size: 30px;
-  margin: 2px 0 6px;
+  font-size: clamp(24px, 7vw, 30px);
+  margin: 4px 0;
+}
+
+.hero-card {
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 .hero-subtitle {
@@ -1910,6 +1918,38 @@ animation:fadeUp 1s 3.2s ease forwards;
 .scroll-arrow {
   font-size: 18px;
 }
+/* FINAL HERO MOBILE FIX */
+.hero-card {
+  padding: 30px 14px;
+  max-height: none;
+}
+
+.hero-title {
+  font-size: clamp(25px, 7.2vw, 30px) !important;
+  line-height: 1.16;
+  letter-spacing: 0;
+  overflow-wrap: anywhere;
+}
+
+.hero-title span {
+  font-size: clamp(23px, 6.8vw, 28px) !important;
+  margin: 4px 0;
+}
+
+.hero-subtitle {
+  font-size: 20px;
+}
+
+.hero-bottom-text {
+  font-size: 13px;
+}
+
+.hero-scroll-cue {
+  margin-top: 16px;
+  font-size: 9px;
+  padding: 8px 13px;
+  letter-spacing: 1.1px;
+}
 }
 }
 </style>
@@ -1966,7 +2006,7 @@ we warmly invite you to celebrate our wedding.
   <div class="hero-content">
     <div class="hero-card">
 
-      <p class="hero-top-text">WITH LOVE & BLESSINGS</p>
+      <p class="hero-top-text">SURROUNDED BY LOVE</p>
 
       <h1 class="hero-title">
         Padalingam
