@@ -1230,26 +1230,16 @@ animation:fadeUp 1s 3.2s ease forwards;
   transform: translateY(-4px);
 }
 
-.footer-wish-title {
-  color: #f5ddae;
-  font-family: 'Cinzel', serif;
-  font-size: 13px;
-  letter-spacing: 4px;
-  text-transform: uppercase;
-  margin-bottom: 18px;
-  position: relative;
-  z-index: 1;
+.whatsapp-btn {
+  background: #ffffff;
+  color: #1c120e;
+  box-shadow: 0 14px 35px rgba(255,255,255,0.12);
 }
 
 .instagram-btn {
   background: transparent;
   color: #ffffff;
   border: 1px solid rgba(198,164,106,0.45);
-  box-shadow: 0 14px 35px rgba(255,255,255,0.06);
-}
-
-.instagram-btn:hover {
-  background: rgba(198,164,106,0.12);
 }
 
 .footer-note {
@@ -1258,76 +1248,50 @@ animation:fadeUp 1s 3.2s ease forwards;
   letter-spacing: 2px;
 }
 /* =========================================
-   HERO SCROLL CUE - TEMPLATE STYLE
+   SIMPLE HERO SCROLL CUE
 ========================================= */
 .hero-scroll-cue {
   position: relative;
-  z-index: 3;
+  z-index: 10;
 
   display: inline-flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 10px;
+  gap: 4px;
 
-  margin: 24px auto 0;
-  padding: 11px 22px;
+  width: fit-content;
+  margin: 22px auto 0;
 
-  text-decoration: none !important;
-  color: #8a5d3b !important;
-
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 2.2px;
+  text-decoration: none;
+  color: #6c4632;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
 
+  background: rgba(255,250,241,0.88);
+  border: 1px solid rgba(198,164,106,0.35);
+  padding: 10px 18px;
   border-radius: 999px;
-  border: 1px solid rgba(198,164,106,0.36);
-  background:
-    linear-gradient(180deg, rgba(255,250,241,0.82), rgba(247,239,227,0.62));
+  box-shadow: 0 12px 30px rgba(59,43,36,0.12);
+  backdrop-filter: blur(8px);
 
-  box-shadow:
-    0 12px 28px rgba(59,43,36,0.10),
-    inset 0 1px 0 rgba(255,255,255,0.78);
-
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 1;
+  pointer-events: auto;
 }
 
-.hero-scroll-cue:hover {
-  transform: translateY(-2px);
-  box-shadow:
-    0 16px 34px rgba(59,43,36,0.14),
-    inset 0 1px 0 rgba(255,255,255,0.82);
-}
-
-.cue-text {
+.scroll-arrow {
+  font-size: 22px;
   line-height: 1;
+  animation: simpleArrowBounce 1.4s ease-in-out infinite;
 }
 
-.cue-icon {
-  width: 22px;
-  height: 22px;
-  border-radius: 50%;
-  background: rgba(198,164,106,0.18);
-  color: #8a5d3b;
-
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  animation: cueBounce 1.4s ease-in-out infinite;
-}
-
-.cue-icon svg {
-  width: 15px;
-  height: 15px;
-}
-
-@keyframes cueBounce {
+@keyframes simpleArrowBounce {
   0%, 100% {
     transform: translateY(0);
   }
   50% {
-    transform: translateY(4px);
+    transform: translateY(5px);
   }
 }
 
@@ -1937,21 +1901,14 @@ animation:fadeUp 1s 3.2s ease forwards;
   height: 25px;
 }
 .hero-scroll-cue {
-  margin-top: 18px;
-  padding: 10px 16px;
+  margin-top: 16px;
   font-size: 9px;
-  letter-spacing: 1.5px;
-  gap: 8px;
+  padding: 8px 13px;
+  letter-spacing: 1.1px;
 }
 
-.cue-icon {
-  width: 20px;
-  height: 20px;
-}
-
-.cue-icon svg {
-  width: 13px;
-  height: 13px;
+.scroll-arrow {
+  font-size: 18px;
 }
 }
 }
@@ -2025,14 +1982,10 @@ we warmly invite you to celebrate our wedding.
       <div class="hero-divider"></div>
       <p class="hero-bottom-text">
       </p>
-      <a href="#familySection" class="hero-scroll-cue" aria-label="Scroll to next section">
-        <span class="cue-text">Scroll to explore</span>
-        <span class="cue-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="m6 9 6 6 6-6"></path>
-          </svg>
-        </span>
-      </a>
+  <a href="#familySection" class="hero-scroll-cue" aria-label="Scroll to next section">
+    <span>Scroll to explore</span>
+    <span class="scroll-arrow">⌄</span>
+  </a>
     </div>
   </div>
 </section>
@@ -2258,30 +2211,28 @@ we warmly invite you to celebrate our wedding.
     Your presence and blessings would mean the world to us.
   </p>
 
-<div class="footer-wish-title">Wish us on</div>
+  <div class="footer-actions">
+    <a
+      href="https://wa.me/919843639937?text=Congratulations%20Padalingam%20and%20Rajarajeshwari!%20Wishing%20you%20a%20beautiful%20life%20together."
+      target="_blank"
+      rel="noopener noreferrer"
+      class="social-btn whatsapp-btn"
+    >
+      WhatsApp Wishes
+    </a>
 
-<div class="footer-actions">
-  <a
-    href="https://www.instagram.com/sathishpada/"
-    target="_blank"
-    rel="noopener noreferrer"
-    class="social-btn instagram-btn"
-  >
-    Padalingam Insta
-  </a>
-
-  <a
-    href="https://www.instagram.com/rajarajeshwarim/"
-    target="_blank"
-    rel="noopener noreferrer"
-    class="social-btn instagram-btn"
-  >
-    Rajarajeshwari Insta
-  </a>
-</div>
+    <a
+      href="https://www.instagram.com/@sathishpada/"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="social-btn instagram-btn"
+    >
+      Instagram
+    </a>
+  </div>
 
   <p class="footer-note">
-    Designed by Paddy
+    Padalingam & Rajarajeshwari · 07 June 2026
   </p>
 </footer>
 
